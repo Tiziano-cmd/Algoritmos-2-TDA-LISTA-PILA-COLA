@@ -33,7 +33,9 @@ int main(int argc, char *argv[])
 
 	printf("Muestro los elementos usando el iterador interno:\n");
 	int posicion = 0;
-	lista_iterar(l, mostrar_int, &posicion);
+	int llamadas = lista_iterar(l, mostrar_int, &posicion);
+	printf("La cantidad de llamadas totales a la funcion mostrar_int fueron: %d\n",
+	       llamadas);
 
 	printf("\nMuestro los elementos usando lista_obtener_elemento:\n");
 	for (int i = 0; i < lista_tamanio(l); i++) {
